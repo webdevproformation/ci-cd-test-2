@@ -1,0 +1,27 @@
+name: Symfony Demo CI
+on:
+    push:
+        branches: [ main ]
+    workflow_dispatch:
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+        - 
+            name: get source from github
+            uses: actions/checkout@v7
+            with:
+                repository: 'symfony/demo'
+                ref: 'main'
+        - 
+            name: setup PHP sur debian 
+            uses: shivammathur/setup-php@v2
+            with:
+                php-version: '8.4'
+        - 
+            name: install les dépendances 
+            run: composer install
+        - 
+            name: exécuter les tests 
+            run: php bin/phpunit
