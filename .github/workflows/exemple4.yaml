@@ -1,0 +1,17 @@
+name: my_workflow_with_env_local_job_step
+on:
+    push: 
+        branches: [ main ]
+    workflow_dispatch:
+
+jobs:
+    hello:
+        env: 
+            PRENOM: Alain
+        runs-on: ubuntu-latest
+        steps:
+        - 
+            name: Dire bonjour
+            env: 
+                AGE: 22
+            run: echo $PRENOM, qui a $AGE ans, dit bonjour
