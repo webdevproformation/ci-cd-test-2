@@ -9,7 +9,7 @@ env:
     env_var2: "les amis"
 
 jobs:
-    cowsay:
+    hello:
         runs-on: ubuntu-latest
         steps:
         - 
