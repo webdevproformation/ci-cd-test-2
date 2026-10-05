@@ -1,0 +1,17 @@
+name: my_workflow_with_env_secret
+on:
+    push:
+        branches: [ main ]
+    workflow_dispatch:
+
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+        - 
+            name: dit moi un secret
+            run: |
+                if [ ${{ secrets.SECRET }} == "un texte" ]
+                then echo "secret valide"
+                else echo "secret invalide"
+                endif
