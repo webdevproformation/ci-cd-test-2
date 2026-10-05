@@ -14,4 +14,4 @@ jobs:
                 if [ ${{ secrets.SECRET }} == 'un texte' ]
                 then echo 'secret valide'
                 else echo 'secret invalide'
-                endif
+                fi
