@@ -11,7 +11,7 @@ jobs:
         - 
             name: dit moi un secret
             run: |
-                if [ ${{ secrets.SECRET }} == "un texte" ]
-                then echo "secret valide"
-                else echo "secret invalide"
+                if [ ${{ secrets.SECRET }} == 'un texte' ]
+                then echo 'secret valide'
+                else echo 'secret invalide'
                 endif
