@@ -1,0 +1,17 @@
+name: my_workflow_with_env_globale
+on:
+    push: 
+        branches: [ main ]
+    workflow_dispatch:
+
+env:
+    env_var1: "Bonjour"
+    env_var2: "les amis"
+
+jobs:
+    cowsay:
+        runs-on: ubuntu-latest
+        steps:
+        - 
+            name: Dire bonjour
+            run: echo $env_var1 $env_var2
