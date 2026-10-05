@@ -14,3 +14,8 @@ jobs:
         - 
             name: Dump github context
             run: echo '${{ toJSON(github) }}'
+        - 
+            name: Show variables
+            run: |
+                echo "OS: ${{ runner.os }}"
+                echo "$GITHUB_REPOSITORY"
