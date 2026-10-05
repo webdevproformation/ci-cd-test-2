@@ -1,4 +1,4 @@
-name: my_workflow
+name: my_workflow_with_action_predefinies
 on:
     push: 
         branches: [ main ]
